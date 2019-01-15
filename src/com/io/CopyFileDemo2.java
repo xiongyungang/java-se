@@ -1,0 +1,24 @@
+package com.io;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+/*
+ * 字节流复制对象
+ */
+public class CopyFileDemo2 {
+	public static void main(String[] args) throws IOException {
+		FileInputStream fis = new FileInputStream("b.txt");
+		FileOutputStream fos = new FileOutputStream("D:\\b_copy.txt");
+		
+		byte[] by = new byte[1024];
+		int len;
+		while((len=(fis.read(by)))!=-1){
+			fos.write(by, 0, len);
+		}
+		
+		fis.close();
+		fos.close();
+	}
+}
