@@ -14,7 +14,7 @@ public class FileOutputStreamDemo {
 		byte[] byStr = "hello".getBytes();
 		
 		//写入字节数组的一部分
-		fos.write(by, 0, 2);
+		fos.write(by, 0, 4);
 		
 		fos.write(byStr);
 		fos.flush();

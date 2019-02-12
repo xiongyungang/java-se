@@ -14,8 +14,6 @@ import java.util.Set;
  * Map:
  * 		HashMap
  * 		TreeMap
- * 
- * @author Administrator
  *
  */
 public class HashMapDemo1 {

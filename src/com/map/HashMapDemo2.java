@@ -1,6 +1,7 @@
 package com.map;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -22,9 +23,15 @@ public class HashMapDemo2 {
 	}
 
 	private static void ergodic2(Map<String, String> map) {
-		Set<Entry<String, String>> entrySet = map.entrySet();
-		for(Entry<String, String> ele:entrySet){
-			System.out.println(ele.getKey()+":"+ele.getValue());
+		Set<Entry<String,String>> entrySet = map.entrySet();
+//		Iterator<Entry<String, String>> iterator = entrySet.iterator();
+//		while(iterator.hasNext()){
+//			Entry<String, String> next = iterator.next();
+//			System.out.println(next.getKey()+":"+next.getValue());
+//		}
+		//ÔöÇ¿for
+		for(Entry<String,String> entry:entrySet){
+			System.out.println(entry.getKey()+":"+entry.getValue());
 		}
 	}
 

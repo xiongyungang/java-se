@@ -1,0 +1,20 @@
+【字节流】
+输入字节流：读数据
+-----|InputStream 所有输入字节流的基类。 抽象类。
+-------| FileInputStream 读取文件的输入字节流。
+-------| BufferedInputStream 缓冲输入字节流，为了提高读取文件数据的效率。
+输出字节流: 写数据
+-----|OutputStream  所有输出字节流的基类。  抽象类。
+-------| FileOutputStream 向文件输出数据 的输出字节流。
+-------|BufferedOutputStream  缓冲输出字节流，为了提高向文件写数据的效率
+
+
+【字符流】
+输入字符流：读数据
+-----|Reader 所有输入字符流的基类。 抽象类。
+-------|FileReader 读取文件字符的输入字符流。 
+-------|BufferedReader 缓冲输入字符流，提高读取文件字符的效率并且拓展了功能（readLine()）
+输出字符流：写数据
+-----|Writer 所有输出字符流的基类。 抽象类。
+-------|FileWriter 向文件输出字符数据的输出字符流。
+-------|BufferedWriter 缓冲输出字符流，提高写文件字符的效率并且拓展了功能（newLine()）。
