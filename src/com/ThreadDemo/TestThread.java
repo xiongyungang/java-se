@@ -19,8 +19,8 @@ public class TestThread {
 		
 		MyThread my1=new MyThread();//设置线程名
 		MyThread my2=new MyThread();
-		my1.setName("线程1");
-		my2.setName("线程2");
+		my1.setName("线程1 ");
+		my2.setName("线程2 ");
 		my1.start();
 		my2.start();
 		

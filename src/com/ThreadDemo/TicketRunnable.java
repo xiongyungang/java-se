@@ -42,7 +42,7 @@ public class TicketRunnable implements Runnable {
 			} else {
 				check();
 			}
-
+			x++;
 		}
 	}
 	

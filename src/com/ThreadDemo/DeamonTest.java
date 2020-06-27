@@ -12,16 +12,9 @@ public class DeamonTest {
 		
 		Thread d1 = new Thread(d);
 		Thread d2 = new Thread(d);
-				
-		d1.setDaemon(true);
-		d2.setDaemon(true);
-		
+
 		d1.start();
 		d2.start();
 
-		for(int i = 0;i<10;i++){
-			//打印main线程(主线程)线程名
-			System.out.println(Thread.currentThread().getName()+"---"+i);
-		}
 	}
 }

@@ -15,16 +15,13 @@ public class JoinTest {
 		Thread tp3 = new Thread(p);
 
 		tp1.setName("xyg");
-		tp2.setName("zss");
-		tp3.setName("ld");
+		tp2.setName("fuck");
+		tp3.setName("wdnmd");
 
-		tp1.setPriority(10);
-		tp2.setPriority(1);
-		tp3.setPriority(1);
 
 		tp1.start();
 		try {
-			tp1.join();
+			tp1.join(10);  //  其他线程等待该线程终止
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

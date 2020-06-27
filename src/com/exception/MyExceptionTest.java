@@ -5,6 +5,12 @@ import java.util.List;
 
 public class MyExceptionTest {
 	public static void main(String[] args) throws MyException {
+		try{
+			throw new MyRuntime("a runtime exception!");
+		} catch (MyRuntime myRuntime){
+			System.out.println("myRuntime = " + myRuntime);
+		}
+
 		List<String> list = new ArrayList<>();
 		list.add("ÄÐ");
 		list.add("Å®");

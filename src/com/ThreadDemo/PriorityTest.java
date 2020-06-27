@@ -17,10 +17,10 @@ public class PriorityTest {
 		Thread tp3 = new Thread(p);
 
 		tp1.setName("xyg");
-		tp2.setName("zss");
-		tp3.setName("ld");
+		tp2.setName("wdf");
+		tp3.setName("OoO");
 		
-		tp1.setPriority(10);
+		tp1.setPriority(10);  //  最高优先级
 		tp2.setPriority(1);
 		tp3.setPriority(1);
 		
