@@ -2,7 +2,7 @@ package com.string;
 
 public class StringTest {
 	public static void main(String[] args) {
-		String str = "fdsfnbafdsfnbasdfsdfsfnbasdfdsfsdfdsfsnbasdfsfsnbafdsfsnbanfdsfsbanba";
+		String str = "nbaxxnba";
 		int count = getCount(str, "nba");
 		System.out.println(count);
 	}

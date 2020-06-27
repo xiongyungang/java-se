@@ -1,10 +1,6 @@
 package com.collectionDemo;
 
-import com.Employee;
-import com.Person;
-
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.TreeSet;
 
 /**
