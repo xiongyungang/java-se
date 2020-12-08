@@ -4,9 +4,9 @@ package com.collectionDemo;
  *collection: 	List	 
  *				set
  *List:
- *	ArrayList Êý×éÊµÏÖ²éÑ¯¿ìÔöÉ¾Âý
- *	Vector	Êý×éÊµÏÖ
- *	LinkedList Á´±íÊµÏÖÔöÉ¾¿ì
+ *	ArrayList ï¿½ï¿½ï¿½ï¿½Êµï¿½Ö²ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½
+ *	Vector	ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½
+ *	LinkedList ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½
  *set:
  *	HashSet
  *	TreeSet
@@ -15,10 +15,8 @@ package com.collectionDemo;
 import java.time.LocalDate;
 import java.util.*;
 
-import org.junit.Test;
-
-import com.Employee;
-import com.Student;
+import com.core_java_volume.Employee;
+import com.core_java_volume.Student;
 
 public class CollectionDemo {
 	public static void main(String a[]) {
@@ -34,9 +32,9 @@ public class CollectionDemo {
 
 	// TreeSet
 	public static void treeSetTest() {
-		// È¥ÖØ¸´£¬¿ÉÅÅÐò£¬Ä¬ÈÏ×ÔÈ»ÅÅÐò
-		// ×ÔÈ»ÅÅÐòÊµÏÖcomparable½Ó¿Ú£¬ÎÞ²Î¹¹Ôì
-		// ±È½ÏÆ÷½Ó¿Ú comparator,´ø²Î¹¹Ôì
+		// È¥ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½
+		// ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½comparableï¿½Ó¿Ú£ï¿½ï¿½Þ²Î¹ï¿½ï¿½ï¿½
+		// ï¿½È½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½ comparator,ï¿½ï¿½ï¿½Î¹ï¿½ï¿½ï¿½
 		TreeSet<Student> staff = new TreeSet<>();
 		staff.add(new Student("xyg", 123));
 		staff.add(new Student("xyg", 456));
@@ -48,7 +46,7 @@ public class CollectionDemo {
 
 	}
 
-	// HashSet¶ÔÏóÈ¥ÖØ¸´
+	// HashSetï¿½ï¿½ï¿½ï¿½È¥ï¿½Ø¸ï¿½
 	public static void hashSetTest() {
 		HashSet<Employee> staff = new HashSet<Employee>();
 		staff.add(new Employee("xygj", "emp", 5000));
@@ -64,7 +62,7 @@ public class CollectionDemo {
 			System.out.println(it.next().toString());
 	}
 
-	// Collection½Ó¿Ú
+	// Collectionï¿½Ó¿ï¿½
 	public static void collention() {
 		Collection staff = new ArrayList();
 		staff.add("hello");
@@ -72,48 +70,48 @@ public class CollectionDemo {
 		staff.add("my name is lilei!");
 		System.out.println("size:" + staff.size() + "  " + staff);
 
-		// ÅÐ¶Ï
+		// ï¿½Ð¶ï¿½
 		System.out.println("contains:" + staff.contains("hello"));
-		// containsAll()°üº¬È«²¿¼¯ºÏÔªËØ·µ»ØÕæ
+		// containsAll()ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø·ï¿½ï¿½ï¿½ï¿½ï¿½
 		// isEmpty()
 
-		// É¾³ý
+		// É¾ï¿½ï¿½
 		staff.remove("world");
 		System.out.println("size:" + staff.size() + "  " + staff);
 		// staff.clear();
 		// System.out.println("isEmpty:"+staff.isEmpty());
 
-		// Ìí¼Ó¼¯ºÏ
+		// ï¿½ï¿½Ó¼ï¿½ï¿½ï¿½
 		Collection temp = new ArrayList();
 		temp.add("age");
 		temp.add("fifteen");
 		staff.addAll(temp);
 		System.out.println("addAll:" + staff);
-		staff.removeAll(temp);// É¾³ýÕû¸ö¼¯ºÏÔªËØ
+		staff.removeAll(temp);// É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 		System.out.println("removeAll:" + staff);
 		;
 	}
 
-	// µü´úÆ÷
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public static void iteratorDemo() {
 		Collection staff = new ArrayList();
 		staff.add("hello");
 		staff.add("world");
 		staff.add("java");
 
-		// ×ªÊý×é
+		// ×ªï¿½ï¿½ï¿½ï¿½
 		Object[] obj = staff.toArray();
 		String[] str = new String[3];
 		for (int i = 0; i < staff.size(); i++)
 			str[i] = (String) obj[i];
 		System.out.println(Arrays.toString(str));
 
-		// µü´úÆ÷
-		// Í¨¹ý¼¯ºÏ¶ÔÏó»ñÈ¡µü´úÆ÷¶ÔÏó
-		Iterator it = staff.iterator();// iterator()·µ»ØIterator×ÓÀà¶ÔÏó
-		// Object next()»ñÈ¡ÔªËØ²¢ÒÆ¶¯µ½ÏÂÒ»¸ö¼¯ºÏ¶ÔÏó
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// Í¨ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		Iterator it = staff.iterator();// iterator()ï¿½ï¿½ï¿½ï¿½Iteratorï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// Object next()ï¿½ï¿½È¡Ôªï¿½Ø²ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½ï¿½
 		System.out.println(it.next());
-		// boolean hasNext() Èç¹û»¹ÓÐÔªËØ
+		// boolean hasNext() ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 		while (it.hasNext()) {
 			System.out.println(it.next());
 		}
@@ -162,7 +160,7 @@ public class CollectionDemo {
 		for (int i = 0; i < staff.size(); i++) {
 			System.out.println(staff.elementAt(i).toString());
 		}
-		// µü´úÆ÷
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		// hasnext() next()
 		Enumeration<LocalDate> en = staff.elements();
 		while (en.hasMoreElements()) {
@@ -179,16 +177,16 @@ public class CollectionDemo {
 		list.add(1, "world");
 		System.out.println("List:" + list);
 
-		// ÁÐ±íµü´úÆ÷£¬ÌØµã
-		// µü´úÆ÷±éÀú¼¯ºÏÊ±£¬Ö±½Ó²Ù×÷Ô­¼¯ºÏ»á²úÉú²¢·¢ÐÞ¸ÄÒì³£
-		// ²ÉÓÃÁÐ±íµü´úÆ÷»òÈ«²¿¼¯ºÏ²Ù×÷
+		// ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ö±ï¿½Ó²ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½Ï»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ì³£
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«ï¿½ï¿½ï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½
 		ListIterator iterator = list.listIterator();
-		// lit.add("java");//Í·²¿Ìí¼Ó£¬Ö¸ÕëÆ«ÒÆ
+		// lit.add("java");//Í·ï¿½ï¿½ï¿½ï¿½Ó£ï¿½Ö¸ï¿½ï¿½Æ«ï¿½ï¿½
 		while (iterator.hasNext()) {
 			System.out.println((String) iterator.next());
 		}
-		// ÄæÏò±éÀúÐèÒªÖ¸ÕëÔÚÎ²²¿
-//		while (lit.hasPrevious())// ÄæÏò±éÀú
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÖ¸ï¿½ï¿½ï¿½ï¿½Î²ï¿½ï¿½
+//		while (lit.hasPrevious())// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //			System.out.print((String) lit.previous());
 	}
 }

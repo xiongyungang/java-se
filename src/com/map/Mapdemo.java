@@ -7,12 +7,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 
-import com.Employee;
-import com.Student;
+import com.core_java_volume.Employee;
+import com.core_java_volume.Student;
 
 /*
- * Map:¼üÖµ¶Ô£¬Ë«ÁÐ¼¯ºÏ
- * Collection:µ¥ÁÐ¼¯ºÏ
+ * Map:ï¿½ï¿½Öµï¿½Ô£ï¿½Ë«ï¿½Ð¼ï¿½ï¿½ï¿½
+ * Collection:ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½
  */
 public class Mapdemo {
 	public static void main(String arg[]) {
@@ -26,11 +26,11 @@ public class Mapdemo {
 		staff.put("001", "xyg");
 		staff.put("002", "xyg");
 		staff.put("003", "sjz");
-		staff.put("003", "nnn");// ·µ»Øsjz
+		staff.put("003", "nnn");// ï¿½ï¿½ï¿½ï¿½sjz
 		staff.put("004", "xjs");
 		staff.put("005", "jl");
 
-		System.out.println(staff.remove("004"));// ·µ»ØÉ¾³ýÖµ
+		System.out.println(staff.remove("004"));// ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½Öµ
 		System.out.println(staff.remove("0045"));
 		System.out.println(staff.remove("005", "jl"));// true
 
@@ -40,33 +40,33 @@ public class Mapdemo {
 
 		staff.size();// Key size
 
-		// »ñÈ¡¼ü¼¯ºÏ
+		// ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		Set<String> key = staff.keySet();
 		for (String e : key)
 			System.out.println(e);
 
-		// »ñÈ¡Öµ¼¯ºÏ
+		// ï¿½ï¿½È¡Öµï¿½ï¿½ï¿½ï¿½
 		Collection<String> value = staff.values();
 		for (String e : value)
 			System.out.println(e);
 
-		// staff.get(Key)Í¨¹ý¼üÕÒÖµ
+		// staff.get(Key)Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
 		for (String e : key)
 			System.out.println("Key:" + e + " Value:" + staff.get(e));
 
-		// ¶ÔÏó±éÀú1
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1
 		student();
 
-		// ¶ÔÏó±éÀú2
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2
 		employee();
 
-		// ¶ÔÏó±éÀú3
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½3
 		teacher();
 	}
 
 	private static void treeMap() {
-		// È¥ÖØ¸´£¬¿ÉÅÅÐò
-		// ×Ô¶¨Òå¶ÔÏó±ØÐëÊµÏÖÅÅÐò½Ó¿Ú
+		// È¥ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿ï¿½
 		TreeMap<Teacher, String> staff = new TreeMap<>(new Comparator<Teacher>() {
 			@Override
 			public int compare(Teacher o1, Teacher o2) {
@@ -108,7 +108,7 @@ public class Mapdemo {
 		for (Employee e : emp)
 			staff.put(e.getName(), e.getDescription());
 
-		// ¼üÖµ¶Ô¶ÔÏó
+		// ï¿½ï¿½Öµï¿½Ô¶ï¿½ï¿½ï¿½
 		Set<Map.Entry<String, String>> set = staff.entrySet();
 		for (Map.Entry<String, String> e : set)
 			System.out.println("NAME:" + e.getKey() + " DEC: " + e.getValue());
@@ -121,7 +121,7 @@ public class Mapdemo {
 		HashMap<Integer, String> stuMap = new HashMap<>();
 		for (Student e : s)
 			stuMap.put(e.getId(), e.getName());
-		// Í¨¹ý¼üÕÒÖµ
+		// Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
 		Set<Integer> Key = stuMap.keySet();
 		for (Integer e : Key)
 			System.out.println("ID:" + e + " NAME:" + stuMap.get(e));

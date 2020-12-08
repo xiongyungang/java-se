@@ -6,8 +6,8 @@ import java.util.List;
 public class MyExceptionTest {
 	public static void main(String[] args) throws MyException {
 		try{
-			throw new MyRuntime("a runtime exception!");
-		} catch (MyRuntime myRuntime){
+			throw new MyException("a runtime exception!");
+		} catch (MyException myRuntime){
 			System.out.println("myRuntime = " + myRuntime);
 		}
 
